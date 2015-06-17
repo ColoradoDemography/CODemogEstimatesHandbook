@@ -17,6 +17,21 @@ Often the place will contact you directly to start the process, asking a questio
 
 Done in the Estimates database in the table "CityandCounty_Contacts" or "District_Contacts".  Also make sure to put a Word document with the email into the folder for the most recent challenge period (example here for Vintage 2013: J:\Estimates\Adjustments\LocalReviewsAndChallenges\v2013ReviewsandChallenges).
 
+The emails that are used to send out the review are not these emails, but instead are the listed CTF Administrator for each area.  These are updated each year during the certification process for CTF and are generally more accurate.  The lists are currently run using the Mailman system, although there was some work done towards using Google Groups if they can add bulk uploading and management options.  The url for each group is below, an important note is to watch the notification settings before making any changes to the lists or people get emails and worry that they've been removed unnecessarily.
+
+County: 
+email - ctf_county@mailman.state.co.us
+url - http://mailman.state.co.us/mailman/admin/ctf_county
+
+Municipality:
+email - ctf_muni@mailman.state.co.us
+url - http://mailman.state.co.us/mailman/admin/ctf_muni
+
+District:
+email - ctf_district@mailman.state.co.us
+url - http://mailman.state.co.us/mailman/admin/ctf_district
+
+List Password: demography
 
 ### Data Challenges
 When an entity replies, they often will immediately supply some justification or supporting data, but not always.  There are two situations where they may not: a calculation/model error or they just didn't know they should.  It is important to get some documentation of the claims.  Most often it is a housing unit count issue and the best thing to get is a set of permits or COs.  Otherwise, we can be fairly creative including looking at water billing (for totals and vacancy), parcel data if we know the timing, or other data that makes sense.  The important thing is to try to get the data the most accurate you can while making sure the place understands why the estimate is what it is.  You don't always need to "give in" and take whatever the place gives, but you need to educate them on the process and requirements so that you can build a relationship.  Throughout the process remember that "challenges" aren't bad, they are a great thing because they help make our estimates more accurate and establish a relationship with the place.
