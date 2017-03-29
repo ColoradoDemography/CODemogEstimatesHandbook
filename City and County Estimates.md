@@ -2,13 +2,13 @@
 
 #Outline
 1. Input Data
-	1. Construction Data and Source Choice
-	2. Group Quarters verification
+ 1. Construction Data and Source Choice
+ 2. Group Quarters verification
 2. Methodology
 3. Database Specifics
 4. Review Considerations/ Tests
-	1. County Sums - Tp Gqp
-	2. Non-negative values
+ 1. County Sums - Tp Gqp
+ 2. Non-negative values
 
 # Input Data
 Aside from relying on the county estimates as benchmarks, the city and county process is largely dependent on housing and group quarters data.  These two data types are collected using fairly complex methodologies that I felt we best described in their own sections.  The Residential Construction Survey section deals with the details of collecting and processing the construction data needed for this process.  The RCS also asks areas for GQ data.  Additionally, there are prisons and the College Survey to be concerned about.  Looking into the RCS and GQ sections will give you a good idea of what our input data looks like.
@@ -20,7 +20,7 @@ The following tables are relevant and used in the creation of the City and Count
 
 CityandCounty_Estimates2010_Master: This is the most important table.  It includes the actual estimates and the various components.  Most of the following tables help to update this one.  If you need data on places, come here first.
 
-CityandCounty_AnnualConstructionData_2010: This table is the second most important.  It is used to house all of the construction data and is manually updated to reflect the proper source for each year.  We try to use local data, but if we can't we use Census.  If we ahve a good timeseries, we use Local Building Permits.  We only use COs if we can do so for the whole county.  Census is the back-up for any area we don't have data on.  The source needs to be set for each year.
+CityandCounty_AnnualConstructionData_2010: This table is the second most important.  It is used to house all of the construction data and is manually updated to reflect the proper source for each year.  We try to use local data, but if we can't we use Census.  If we have a good timeseries, we use Local Building Permits.  We only use Certificates of Occupancy if we can do so for the whole county.  Census is the back-up for any area we don't have data on.  The source needs to be set for each year.
 
 CensusCityandCountyMaster_2010: This table is not used directly in the estimates process, but is included when we generate the review reports to help communities understand the differences.
 
@@ -87,4 +87,4 @@ These are the semi-complicated queries that need to be run to generate the city 
 	30. Step29: This step updates the vacancy rates and initially updates the persons per household.
 	27. Step30: This step recalculates the persons per household to ensure that all components in each row produce their estimates.
 
-After you update all of these queries, try running them all at once.  It isn't that helpful if there is an issue, but it's a really fast way to find one.  If all of the queries run, filter the Master on CountyFIPS (filter out the multi county places) and PlaceFIPS (filter out the county totals where PlaceFIPS is equal to 00000).  Then use the Ribbon to turn on Totals on the table if that isn't already enabled.  Set the total populations to a sum total and then check those values against the state totals from the County Estimates.  If these match, you're in good shape.  Re-save the export specifications (click Export on the review queries, click OK on the first box, then click advanced, then click Save As…on the window that pops up and save it as the same name as the ReviewCopyExportMacro has) and send it to the review app by running the Macro.  OR you can do you review how you want and that is cool too.
+After you update all of these queries, try running them all at once.  It isn't that helpful if there is an issue, but it's a really fast way to find one.  If all of the queries run, filter the Master on CountyFIPS (filter out the multi county places CountyFIPS=999) and PlaceFIPS (filter out the county totals where PlaceFIPS is equal to 00000).  Then use the Ribbon to turn on Totals on the table if that isn't already enabled.  Set the total populations to a sum total and then check those values against the state totals from the County Estimates.  If these match, you're in good shape.  Re-save the export specifications (click Export on the review queries, click OK on the first box, then click advanced, then click Save As…on the window that pops up and save it as the same name as the ReviewCopyExportMacro has) and send it to the review app by running the Macro.  OR you can do you review how you want and that is cool too.

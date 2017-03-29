@@ -17,26 +17,11 @@ Often the place will contact you directly to start the process, asking a questio
 
 Done in the Estimates database in the table "CityandCounty_Contacts" or "District_Contacts".  Also make sure to put a Word document with the email into the folder for the most recent challenge period (example here for Vintage 2013: J:\Estimates\Adjustments\LocalReviewsAndChallenges\v2013ReviewsandChallenges).
 
-The emails that are used to send out the review are not these emails, but instead are the listed CTF Administrator for each area.  These are updated each year during the certification process for CTF and are generally more accurate.  The lists are currently run using the Mailman system, although there was some work done towards using Google Groups if they can add bulk uploading and management options.  The url for each group is below, an important note is to watch the notification settings before making any changes to the lists or people get emails and worry that they've been removed unnecessarily.
-
-County: 
-email - ctf_county@mailman.state.co.us
-url - http://mailman.state.co.us/mailman/admin/ctf_county
-
-Municipality:
-email - ctf_muni@mailman.state.co.us
-url - http://mailman.state.co.us/mailman/admin/ctf_muni
-
-District:
-email - ctf_district@mailman.state.co.us
-url - http://mailman.state.co.us/mailman/admin/ctf_district
-
-List Password: demography
+The emails that are used to send out the review are not these emails, but instead are the listed CTF Administrator for each area.  These are updated each year during the certification process for CTF and are generally more accurate.  The lists are currently run using the MailChimp system described in the Contacts section.
 
 ### Data Challenges
-When an entity replies, they often will immediately supply some justification or supporting data, but not always.  There are two situations where they may not: a calculation/model error or they just didn't know they should.  It is important to get some documentation of the claims.  Most often it is a housing unit count issue and the best thing to get is a set of permits or COs.  Otherwise, we can be fairly creative including looking at water billing (for totals and vacancy), parcel data if we know the timing, or other data that makes sense.  The important thing is to try to get the data the most accurate you can while making sure the place understands why the estimate is what it is.  You don't always need to "give in" and take whatever the place gives, but you need to educate them on the process and requirements so that you can build a relationship.  Throughout the process remember that "challenges" aren't bad, they are a great thing because they help make our estimates more accurate and establish a relationship with the place.
+When an entity replies, they often will immediately supply some justification or supporting data, but not always.  There are two situations where they may not: a calculation/model error or they just didn't know they should.  It is important to get some documentation of the claims.  Most often it is a housing unit count issue and the best thing to get is a set of permits or COs.  Otherwise, we can be fairly creative including looking at water billing (for totals and vacancy), parcel data if we know the timing, or other data that makes sense.  The important thing is to try to get the data the most accurate you can while making sure the place understands why the estimate is what it is.  You don't always need to "give in" and take whatever the place gives, but you need to educate them on the process and requirements so that you can build a relationship.  Throughout the process remember that "challenges" aren't bad, they are a great thing because they help make our estimates more accurate and establish a relationship with the place. Almost every challenge is a result of someone not giving us data before or an honest error on our part.
 
-*****Add a more formal section on data vs challenges*******
 ### Replies
 
 Once you've decided on a path of action and preliminary run it by the place (hopefully with their approval) there are two more steps to completing the process for them.  The first is to look at what that change will do to any impacted areas that didn't challenge.  For example, changing the housing units in one place will alter the population (potentially) for every other place in the county.  You'll want to do this before you officially accept the challenge to check of other oddities you may need to work out.  Another important point is keeping Elizabeth (the State Demographer) in the loop on both the challenge and impacted areas.  After you've gotten the challenge finalized, send a reply to the place that challenged letting them know the results and providing any needed explanation (it is a good idea to note that you'll be letting other places in the impacted area know).  Make sure that Tamra is included on the email and print it out for the records.  Keeping the changes made and entities impacted in one big spreadsheet is a good idea (see example: J:\Estimates\Adjustments\LocalReviewsAndChallenges\v2013ReviewsandChallenges\DetailedChangeSummary.xlsx).
