@@ -1,14 +1,10 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 # City and County Estimates
 
-#Outline
-1. Input Data
- 1. Construction Data and Source Choice
- 2. Group Quarters verification
-2. Methodology
-3. Database Specifics
-4. Review Considerations/ Tests
- 1. County Sums - Tp Gqp
- 2. Non-negative values
 
 # Input Data
 Aside from relying on the county estimates as benchmarks, the city and county process is largely dependent on housing and group quarters data.  These two data types are collected using fairly complex methodologies that I felt we best described in their own sections.  The Residential Construction Survey section deals with the details of collecting and processing the construction data needed for this process.  The RCS also asks areas for GQ data.  Additionally, there are prisons and the College Survey to be concerned about.  Looking into the RCS and GQ sections will give you a good idea of what our input data looks like.

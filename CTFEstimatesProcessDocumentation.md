@@ -1,3 +1,8 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 # CTF Challenge Process
 The Conservation Trust Fund estimates are required to be provided for a review period by the local governments they are made for.  This process is typically carried out in the month of June, giving enough time to process and finalize estimates by August 1.  The process includes making draft tables and notifying the local governments of their ability to review them on the web.  The process must last 30 days and must go through Tamra Norton (or the current CTF administrator).
 
