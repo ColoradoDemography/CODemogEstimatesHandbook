@@ -114,17 +114,149 @@ Step10_CTFEstimates_Final_RunAll -  This marco runs all the final estimates tabl
 
 This section contains all of the input data we need to run the model.  It's mostly linked Excel tables and Access tables.  If you want to see everything that is linked externally, use the 'Linked Table Manager'.  That will provide you file locations as well.  Use this to find the files if you need them, to make sure we're linking properly.
 
+BGU_Estimates_2010_Overwrites: This table contains each BGU and any data that we need to force to be a certain number.  This is often done as a result of challenges.  Overwrites change the data in the model directly, although for BGU purposes, they don't necessarily replace the number directly.
 
+CensusCityandCountyMaster_2010: This is a linked table to a sheet that I add to each year featuring the latest Census data for subcounty areas.  This table is where I pull in housing and population data from the Census for some of our reports (Table 2c in particular).
 
-# Reports and Selectors
+CensusCityandCountyMaster_2010ft: This is a static version locked on v2013.  I probably don't need it.  I used it for evaluation I think.  
 
+CensusCityandCountyPlaceSums: Query that sums up parts to get place sums for evaluation purposes.  Not technically an input, but it is based on inputs.
 
+CensusHousingUnit_Master_2010: This table is used to populate the Annual Construction Master Census Permit columns.  This table is more important than the population master from the Census.
 
-# Macros
+CityandCounty_BoundaryChange_2010: This table contains housing and population changes for each place in the state due to annexations, deannexations, or other boundary changes.  All annexations are entered here.
 
+CityandCounty_Estimates2010_Overwrites: Similar to the BGU table, we keep any hard coded data for places in this table.  These overwrites will populate directly in the Master with the exception of calculated values like household size and vacancy/occupancy measures.
 
+CityandCountyGQbase_2010: This table is the base for all of the group quarters estimates we publish.  I change this table when we get updated to the 2010 data, but otherwise pretty rarely.  It is essential though as we don't track totals, only change, so without it we can't generate GQ estimates.
 
+DOLAMigrationAdjustments_2010: This table is a bit of a relic from the days when we didn't trust the Census.  We'd place migration data adjustments here.  We used it that way for modeling our 2010 base from the April 1 data, but haven't used it since.  So we need it, but we don't really edit it.
 
+DPHEBirthData: This holds every birth data point we gather and is updated yearly.
+
+DPHEDeathData: This holds all the death data, pre tabluated to the proper timeframe, and is updated yearly.
+
+LocalBuildingPermitData_2010: This is linked to the spreadsheet that contains the building permit data submitted through the residential construction survey.
+
+LocalCertificateofOccupancyData_2010: This is linked to the spreadsheet that contains the certificate of occupancy data submitted through the residential construction survey.
+
+LocalDemolitionPermitDaata_2010: This is linked to the spreadsheet that contains the demolition permit data submitted through the residential construction survey.
+
+LocalMobileHomeData_2010: This is linked to the spreadsheet that contains the mobile housing data submitted through the residential construction survey.
+
+QCEWEmploymentData:  This is a table we use to populate Table 1 for the counties during the Challenge period.  We use the Q2 employment counts as symptomatic data in that table.
+
+### Estimates Evaluation Queries
+
+I don't really use these anymore, since I usually use my app, but these can be updated to look at percent and absolute change in different variables for evaluation purposes.
+
+### Previous Vintage Tables for Evaluation
+
+These are copies of the Masters from the previous vintage.  I use these to populate the review app output mentioned in the Macro section.  So we update these to get the revisions.
+
+### Contact Tables
+
+CityandCounty_Contacts: I update this contact table at the same time as the MailChimp Contacts so that we attempt to keep it up to date.  The only time I don't is when they ask for that.
+
+District_Contacts: This is a relic table we don't use anymore.
+
+DLG_LGCONTACT: This is a linked Oracle table with all local government contact information in it.  It's used in the following queries along with other entity information tables.
+
+LGISSurveyContactInfo_CaC: I use this table to update the MailChimp and CityandCounty_Contacts lists when something bounces.  If this is the same contact, log into LGIS and move one contact up the hierarchy.
+
+LGISSurveyContactInfoSD: This is the main list I use for CTF and RCS purposes at the Special District level.  This list shows all district administrators for CTF districts.
+
+SurveyCity&CountyContact: Don't use this, not sure how old it is.
+
+### Entity Information
+
+CENSUS_COGEO: This is likely unnecessary now that we have the new database, but I used to use it to get different geography data. It's a linked Oracle table.
+
+DLG_CTF_ENTITY: This is a linked Oracle table with data on CTF entities and whether or not they are eligible for distribution. I use this to help make the contact list.
+
+DLG_LG2CNTY: This is a linked ORacle table that crosswalks LGID numbers from LGIS to the corresponding county.
+
+DLG_LGBASIC: This is a linked Oracle table with a few basic data points on each local government that is used to link and filter queries.
+
+DLG_LGSTATUS: This linked Oracle table lets you know the status of an entity, it's been used in the past as a check against the City and County data, but it really wasn't needed due to the CTF table.
+
+DLG_V_CTF_CERT_FOR_POP_CALC: This is a view of entities certified to be given funds.  This is the table Mark uses when running his estimates.  We are hoping to build a check system on our side that would help us eliminate failures when we push to Mark Krudwig.  See the Email string in PDFs here: J:\Estimates\Admin\Instructions\Mark CTF Checks Round 1-3
+
+regfips: This table is a crosswalk for places to planning and management regions.
+
+### Review Reports
+
+This section contains tables we use for CTF and RCS as well as queries I use for building the review app. The tables labeled DRAFT are turned into finals when I finish the year, I didn't in v2015 because I made a look-up based site in R, but I'm likely going back to this in v2016.
+
+County_estimates_review_current to muni_estimates_review_previous: These tables are used to export to csv for the estimates review app.  They are built from current and previous masters.
+
+Table1_Draft_2015: This is a table we provide with Symptomatic Data.  We'd moved to a lookup based format last year, but may be going back for simplicity's sake.
+
+Table2_Draft_2015: This is the most detailed table we produce for each county and municipality.  This is linked to a huge query to pull all this data in. It was previously Table2c, which is what Elizabeth calls it.
+
+Table2_rcs_2015: This shows final data from the previous vintage and is used for the RCS.
+
+Table2mc_Draft_2015: This is the same as Table2_Draft_2015, but has data for only multi-county places. This is needed due to the query structure we use.
+
+Table2mc_rcs_2015:  This is the same story as above.
+
+Table3_Draft_2015: This table contains all the details of the population estimates for each place, but no symptomatic or input data.
+
+Table3_rcs_2015: The same as the table above, but with the previous vintage data and used for the RCS.
+
+Table4_Draft_2015: This table shows all the special district estimates.  This is what I give to areas that want a table and that we post online.
+
+Table4_rcs_2015: Same as above, but with previous data.
+
+TableA_rcs_2015: This table contains the construction data we used in the previous vintage.  We give this out for the RCS.
+
+### Report Selectors
+
+These are the queries that the reports in the above sections rely on.  They get updated every year.  Their names tell you where they link to, but you can use the reports to figure out which is which.
+
+### Data Requests
+
+These are tables I use to help respond to data requests.  They are either frequently requested or annoying to pull, so if I do it once I can do it again.
+
+CountyMuniPopHousing: This table contains total population and housing units from 2010 onward.
+
+CountyNetMigration: This table contains net migration for the vintage period without GQ change.
+
+countyplacehousingunits: This table has only total housing units for all county-place combinations.
+
+DirectDistributionPull:  This is the query that generates the table we give to Cynthia each August for the Direct Distribution.
+
+LGID_lookup:  This is a quick table to help find LGID values for the areas we estimate for.
+
+ParksandRecCTFPop-ParksandRecDistricts:  We sometimes get asked about parks and rec districts (NOT including metro districts), it's happened twice, so I built these since it's a pain to pull.
+
+TotalPopulationbyCounty: Exactly what it says.
+
+TotalPopulationbyMuni: This has total populations for municipalities, it sums together the multi-county areas, so Aurora has one line.
+
+VacancyRates: This is a query that shows every county-places vacancy rate.  I use this for evaluation purposes mostly.
+
+### Final Tables for the Annual Meeting
+
+All of these queries are used to generate the data to update the Final Tables in the Tables directory.  I typically use a vlookup to ensure we get the right data into the sheet.
+
+CountyTable1: This one corresponds to the Table 1 we make for all of the counties, it also has the April 1 and 2010 Base numbers.
+
+County_FinalTable: This one just has county populations for each year, no bases.
+
+CountyMasterwTableRegionNums: We used this to make a regional table, but I don't anymore.
+
+CountyMuniHousing: This corresponds to the CountyMuniHousingXXXX table.
+
+demog_update_table: This was used previous to update the codemog R package.
+
+muniranked: This updates the muniranked table we produce for the annual meeting.
+
+popbycountyandmuniXXXX: This updates the tables of the same name.
+
+prregiontotals: This is used for region totals, we used to need this for the old online databases in Access.
+
+RegionSumsnonPM: This was used for the different region definitions we displayed online, like Western Slope.  It's not needed now since we use a view in Postgres to do that.
 
 ## Archiving the Database
 

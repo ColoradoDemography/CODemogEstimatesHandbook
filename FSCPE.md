@@ -2,20 +2,75 @@
 
 # Outline
 1. County Estimate Review
- 1. Hints and Tips - We aren't ready usually
-2. Housing Unit Review
- 1. Timing and RCS
- 2. Methodology
-3. Subcounty Population Review
-4. Group Quarters Report(GQR)
- 1. General Thoughts and Process
- 2. Query Structure (Refer to GQ DB?)
-5. Vital Statistics Request
-   1. Totals and Verification
-   2. Race and Supression Sheet
-6. Meetings
- 1. Fall
- 2. Spring
+ 2. Hints and Tips - We aren't ready usually
+3. Housing Unit Review
+ 4. Timing and RCS
+ 5. Methodology
+6. Subcounty Population Review
+7. Group Quarters Report(GQR)
+ 8. General Thoughts and Process
+ 9. Query Structure (Refer to GQ DB?)
+10. Vital Statistics Request
+  1. Totals and Verification
+  2. Race and Supression Sheet
+11. Meetings
+ 12. Fall
+ 13. Spring
+
+
+
+
+# Group Quarters Report (GQR)
+
+To complete this process,, ensure that you're following the guidelines sent by the census and download those files to the Group Quarters>DataFromCensus>XXXX folder, where XXXX is the relevant year.
+
+### Queries
+
+GQR20XX_Step01: This query makes the new table for us to populate by building on the last year's table.  This is done to follow the Census methodology, which requires that each year build on the last for them to include the data.
+
+
+
+GQR20xx_Step02: This query adds in all of the new facilities since 2014.  If you add a facility to the database, then you'll need to make sure to tag it as a GQR include to get it in there. You'll only need this if there are new facilities.
+
+
+
+GQR20xx_Step03: This query updates all of the facilities included in the GQR from last time (See my note about new facilities).
+
+
+
+GQR20XX_Step04: This updated the aggregations (Universities) to the most recent data.  It's worth checking this twice since it's been a problem in the past.
+
+
+
+### Preparing the Submission File
+
+Make sure to review the documentation for any changes in format or requirements.  Since we don't have more recent data (I will add in Prisons since we get that easily) most of the most recent year cells will be blank.
+
+
+
+#### Step 1 
+
+I make a copy of the template file we download from the Census Bureau and rename it with our State then WORKING at the end.  Ensure that you follow the Census naming requirements when doing this, just add WORKING to the end so you don't get confused.  I edit the template file to look like it will need to for submission by deleting out all the template jargon.  Note: you'll need to fix the data validation cells for comment 1 by moving the options way to the right and changing the data validation cells within each comment 1 cell.
+
+
+
+#### Step 2
+
+I copy in the table we make using the queries in the Group Quarters database and pasting it into a blank sheet, then I ensure that the fields are in the right order and copy it into the template.  This is the base for starting my work.  I then carry forward all of the populations that need it and fill in missing Facility ID values.
+
+
+
+#### Step 3 
+
+Then I go through and carefully add in the Comment 1 field using the data validation fields.  I also carry over previous comments to ensure that they get captured.  This is especially important for a facility like Ft. Lyon. It is really important to check the all the new data you put in is right and that the facilities you carry forward are done the same way as before.  Also, we've had historical issues with the universities being doubled.  Make sure to check for that.
+
+
+
+#### Step4
+
+Once you are comfortable with the shape of the submission, follow Census Bureau instructions for review and filing of the request.
+
+
 
 
 
