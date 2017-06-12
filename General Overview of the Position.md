@@ -25,3 +25,15 @@ I (Rob Kemp) took over in November of 2013.  I've improved the integrity of the 
 I've already used a few of these terms at the outset, but I wanted to make sure that the general concepts are clear before the details get covered.  The main focus of this section will be vintaging with a few definition terms for the methods.  The county model uses a component method that relies on take the base population (Census 2010 for this decade, moved from April 1, 2010, to July 1, 2010) and track change by adding natural increase (births minus deaths), group quarters change (any place with shared facilities, see Census documentation for more detail, tracked at the facility level), and net migration (taken from the Census' IRS based method).  The city and county model uses a "controlled" (meaning it sums to the county-level) housing unit method that allocates people based on housing unit change using vacancy rates and persons per household from the Census-base and tracking group quarters population to get a total.  The BGU model uses the housing unit method as well, but proportionally shares out group quarters change.  These are considered to be "postcensal" estimates because they are after the last Census, but before the next.  Intercensal estimates are postcensal estimates that are adjusted after they reach the next Census for any error they may have accumulated across the decade. Each Estimate is made for an estimate year spanning July 1 to June 30, which is also the State's fiscal year.
 
 Vintaging is a process where the entire time series of postcensal estimates are updated each year the estimates process is run. This allows for updated data or methods for any year in the time series to be taken into account.  This is important because each estimate for one year impacts the next because populations build on themselves.  This also allows for local governments to correct errors in previous years that make all following years more accurate.  Unfortunately this means that every year there is a new estimate for that first year in the series.  We notate this by using the latest year in the series and naming the vintage after it.  For example, if the time series for the estimates spans from 2010 to 2014, then the vintage would be called 'Vintage 2014'.  Almost all of the input data is "vintaged" meaning that it is recreated and updated for each set of estimates and stored separately.
+
+
+
+### CTF Estimates Review Shiny Apps:
+
+
+
+https://gis.dola.colorado.gov/apps/ctf_estimates_final/
+
+https://gis.dola.colorado.gov/apps/ctf_challenge_data/
+
+https://gis.dola.colorado.gov/apps/rcs_data/
