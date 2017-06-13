@@ -1,3 +1,8 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 # Remaining Work for CTF and City and County Estimates
 
 1. Add in the responses from the RCS (J:\Estimates\ConstructionData\LocalUpdateData\v2016ResidentialConstructionSurvey) for each district to the BGU_Estimates_2010_Overwrites table and move response to Processed.
@@ -21,8 +26,9 @@
    7. Process responses (typically using the Overwrites table)
    8. Finalize Challenges
 7. Finalize Estimates
-   1. Re-run all queries with final data and overwrites.
-   2. Once you're sure, send the "DirectDistributionPull" query as an Excel file to Cynthia Thayer by August 1.
-   3. See Tables>Vintage 2015 for list of tables to make.
+   1. Get final births and deaths from Kirk.
+   2. Re-run all queries with final data and overwrites.
+   3. Once you're sure, send the "DirectDistributionPull" query as an Excel file to Cynthia Thayer by August 1.
+   4. See Tables>Vintage 2015 for list of tables to make.
       1. Use corresponding queries
-   4. See DatabaseUploads for tables to make to upload to the database. Check with Cindy.
+   5. See DatabaseUploads for tables to make to upload to the database. Check with Cindy.
