@@ -89,4 +89,29 @@ BGUEstimatesOverlapped_step04: Appends overlaps to with overlap table.
 
 
 
-#### CTF Process
+#### CTF Process - Updates 2015CTFEstimatesfinal2
+
+CTFEstimates_Final_Step00: Nulls out entire table
+
+CTFEstimates_Final_Step01: Links to overlap table and updates data at the BGU level
+
+CTFEstimates_Final_Step02: Creates District Sums from the overlap table.
+
+CTFEstimates_Final_Step03: Places District sums in District total rows (PlaceFIPS=00001)
+
+CTFEstimates_Final_Step04: Creates non-districted totals from overlap table
+
+CTFEstimates_Final_Step05: Places non-district totals into each row.
+
+CTFEstimates_Final_Step06: Creates county totals out of BGU overlaps
+
+CTFEstimates_Final_Step07: Places county totals into table
+
+CTFEstimates_Final_Step08: Creates state total
+
+CTFEstimates_Final_Step09: Places state total
+
+CTFEstimates_Final_Step10: Re-calculates persons per household and vacancy rates.
+
+
+
