@@ -1,22 +1,9 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 # Federal State Cooperative for Population Estimates
-
-# Outline
-1. County Estimate Review
- 2. Hints and Tips - We aren't ready usually
-3. Housing Unit Review
- 4. Timing and RCS
- 5. Methodology
-6. Subcounty Population Review
-7. Group Quarters Report(GQR)
- 8. General Thoughts and Process
- 9. Query Structure (Refer to GQ DB?)
-10. Vital Statistics Request
-  1. Totals and Verification
-  2. Race and Supression Sheet
-11. Meetings
- 12. Fall
- 13. Spring
-
 
 
 

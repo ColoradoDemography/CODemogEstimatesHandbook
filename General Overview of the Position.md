@@ -1,3 +1,8 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 # General Overview of the Position
 
 ### Position Description and Overview
